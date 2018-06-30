@@ -9,7 +9,7 @@ angular.module('video-player')
           part: 'snippet',
           query: 'golf',
           maxResults: 5,
-          key: window.YOUTUBE_API_KEY,
+          key: key,
           type: 'video',
           videoEmbeddable: true
         },

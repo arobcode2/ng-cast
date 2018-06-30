@@ -12,7 +12,7 @@ angular.module('video-player')
       //   var youtubeVideos = youTube.getVideos();
       //   console.log(youtubeVideos);
       // };
-      youTube.getVideos();
+      console.log(youTube.getVideos());
       this.onClick = (player) => {
         //scurrentVideo = this.video;
         console.log(player);  
