@@ -2,13 +2,23 @@ angular.module('video-player')
 
   .component('app', {
     // TODO,
-    controller: function() {
+    controller: function(youTube) {
+      //console.log(this);
+      //google how to get access to the service
       this.videos = window.exampleVideoData;
       this.currentThumbnail = 'https://www.youtube.com/embed/' + window.exampleVideoData[0].id.videoId;
       this.currentVideo = window.exampleVideoData[0];
-      this.onClick = function(player) {
-        currentVideo = this.video; 
-        console.log(currentVideo);  
+      // this.youtubeData = function(youTube) {
+      //   var youtubeVideos = youTube.getVideos();
+      //   console.log(youtubeVideos);
+      // };
+      youTube.getVideos();
+      this.onClick = (player) => {
+        //scurrentVideo = this.video;
+        console.log(player);  
+        this.currentVideo = player;
+        this.currentThumbnail = 'https://www.youtube.com/embed/' + player.id.videoId;
+        console.log(this.currentVideo); 
       };
       //console.log(this); 
 
