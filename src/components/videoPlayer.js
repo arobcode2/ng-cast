@@ -1,5 +1,10 @@
 angular.module('video-player')
 
-.component('videoPlayer', {
-  // TODO
-});
+  .component('videoPlayer', {
+    bindings: {
+      currentVideo: '<',
+      currentThumbnail: '<'
+    },
+
+    templateUrl: 'src/templates/videoPlayer.html'
+  });
